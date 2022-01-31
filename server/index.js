@@ -1,7 +1,7 @@
 const express = require('express')
 
 const app = express()
-
+const PORT =6665
 const http = require('http')
 const cors = require('cors')
 const {Server} = require('socket.io')
@@ -19,11 +19,21 @@ const io = new Server(server, {
 
 io.on('connection', (socket) => {
 	console.log('User connected:' + socket.id)
-
-	socket.on('join_room', () => {
+	//เข้าาร่วมห้อง
+	socket.on('join_room', (data) => {
 		socket.join(data)
 		console.log('User ID: ' + socket.id + 'join Room:'+ data)
 
+	}) 
+	//kittiphat
+	//ส่งข้อมูล
+	socket.on('send_message', (data) => {
+		socket.to(data.room).emit('receive_message', data)
+	})
+
+	//ยกเลิกการเชื่อมต่อ
+	socket.on('disconnect', () =>{
+		console.log('User Disconnected', socket.id)
 	})
 })
 
