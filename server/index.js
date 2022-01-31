@@ -36,7 +36,7 @@ io.on('connection', (socket) => {
 		console.log('User Disconnected', socket.id)
 	})
 })
-
+//เชื่อมต่อ PORT แล้วเปิด Browser 
 server.listen(PORT, () => {
 	console.log('SERVER IS RUN localhost:'+PORT);
 })
