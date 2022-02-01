@@ -15,8 +15,8 @@ const io = new Server(server, {
 		origin: hostDefault,
 		methods: ['GET', 'POST'],
 	},
-});
-
+});          
+//kittiphat
 io.on('connection', (socket) => {
 	console.log('User connected:' + socket.id)
 	//เข้าาร่วมห้อง
@@ -25,7 +25,7 @@ io.on('connection', (socket) => {
 		console.log('User ID: ' + socket.id + 'join Room:'+ data)
 
 	}) 
-	//kittiphat
+	
 	//ส่งข้อมูล
 	socket.on('send_message', (data) => {
 		socket.to(data.room).emit('receive_message', data)
