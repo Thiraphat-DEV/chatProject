@@ -17,9 +17,9 @@ const Chat = ({ socket, username, room }) => {
         author: username, // ชื่อผู้ส่ง
         message: curMessage, //ข้อความผู้ส่ง
         // เวลาตอนที่ส่ง
-        time: `${new Date(Date.now().getHours())}:${new Date(
-          Date.now().getMinutes()
-        )}`,
+        time: `${new Date(Date.now()).getHours()}:${new Date(
+          Date.now()).getMinutes()
+        }`,
       };
       await socket.emit("send_message", messageData); //message ของผู้ใช้ที่ทำการส่ง โดย emit message จะต้องตรงกับmessage ที่เปิดไว้ใน server
       setMessageList((list) => [...list, messageData]); //ประวัติของ message เดิม เเละ message ของผู้ใช้ที่ทำการส่งไปใหม่
@@ -54,7 +54,6 @@ const Chat = ({ socket, username, room }) => {
                 </div>
 
                 <div className="message-meta">
-                  <p id="time">{content.time}</p>
                   <p id="author">{content.author}</p>
                   {/* ผู้เขียน */}
                 </div>
