@@ -10,9 +10,9 @@ app.use(cors())
 const server = http.createServer(app)
 const hostDefault = 'http://localhost:3000'
 const io = new Server(server, {
-	cors: {
+	cors: { 
 		origin: hostDefault,
-		methods: ['GET', 'POST'],
+		methods: ['GET', 'POST'], //กำหนดสิทธิ่
 	},
 });          
 //kittiphat
