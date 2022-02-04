@@ -37,3 +37,44 @@ body {
           line-height: 50px;
 
 }
+
+.joinChat {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+}
+
+
+.joinChat h3 {
+        font-size: 100px;
+        margin-bottom: 20px;
+        background-image: linear-gradient(to left,violet,indigo,blue,green,yellow,orange,red); -webkit-background-clip:text;
+        color: transparent;
+}
+
+.joinChat input {
+        width: 400px;
+        height: 40px;
+        border: 2px initial #113C04;
+        border-radius: 5em;
+        padding: 25px;
+        margin: 10px;
+}
+.joinChat input :focus {
+        outline: none;
+}
+
+
+.joinChat button {
+        width: 200px;
+        height: 40px;
+        
+
+}
+
+.joinChat button:hover {
+        background-image: linear-gradient(to left,violet,indigo,blue,green,yellow,orange,red); -webkit-background-clip:text;
+        color: transparent;
+        border-radius: 5em;
+        transition-duration: 3s;
+}
