@@ -49,10 +49,12 @@ const Chat = ({ socket, username, room }) => {
               >
                 <div className="message-content">
                   {/* Message */}
+                 
                   <p>{content.message}</p>
                 </div>
 
                 <div className="message-meta">
+                   <p id="time">{content.time}</p>
                   <p id="author">{content.author}</p>
                   {/* ผู้เขียน */}
                 </div>
