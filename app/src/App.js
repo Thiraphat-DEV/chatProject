@@ -26,11 +26,14 @@ function App() {
             type="text"
             placeholder="Enter UserName"
             onChange={(e) => setUsername(e.target.value)} // กรอกชื่อผู้ใช้
+             autoFocus 
+             required
           />
           <input
             type="text"
             placeholder="Enter RoomID"
             onChange={(e) => setRoom(e.target.value)} // เข้าไปยังห้องที่ผู้ใช้กรอกเลข
+            required
           />
 
           <button onClick={joinRoom}>JOIN ROOM</button>
