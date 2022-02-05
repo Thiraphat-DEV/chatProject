@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
-import "bootstrap/dist/css/bootstrap.min.css";
 import ScrollToBottom from "react-scroll-to-bottom";
 const Chat = ({ socket, username, room }) => {
   //  Wachirawit
@@ -71,11 +70,12 @@ const Chat = ({ socket, username, room }) => {
           onKeyPress={(e) => {
             e.key === "Enter" && sendMessage(); // เมื่อกด Enter จะทำการส่งข้อความ
           }}
+          autoFocus
           onChange={(e) => {
             setCurMessage(e.target.value); //Message ของผู้ใช้
           }}
         />
-        <Button onClick={sendMessage}>SEND</Button> {/* ปุ่มส่งข้อความ */}
+        <Button variant="primary" onClick={sendMessage}>SEND</Button> {/* ปุ่มส่งข้อความ */}
       </div>
     </div>
   );
