@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  nginx:
+    build: .
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "3000:80"
+    stdin_open: true
+    
+
+
