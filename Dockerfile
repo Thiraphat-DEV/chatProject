@@ -5,7 +5,7 @@ WORKDIR /app
 COPY . .
 
 # take to production
-RUN npm run build 
+RUN npm install --production
 
 
 FROM nginx:latest
