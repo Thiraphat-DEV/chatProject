@@ -1,5 +1,5 @@
-# chatProject-
-My project chat group
+# chatProject
+### My project chat group SEC 2
 
 ## นาย กิตติภัทร์  ยางคำ IT หมู่ 2 รหัส 038
 ## นาย ธีรภัทร์  จรเข้ IT หมู่ 2 รหัส 048
